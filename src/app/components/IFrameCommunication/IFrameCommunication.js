@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-// import Frame, { FrameContextConsumer } from 'react-frame-component';
 import { Bellhop } from 'bellhop-iframe';
 
 /**
