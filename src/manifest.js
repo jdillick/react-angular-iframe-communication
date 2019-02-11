@@ -7,7 +7,8 @@ module.exports = {
     get: () => {
         return {
             allActions: {
-                Test: require('components/Demo/Test/actions').default,
+                IFrameCommunication: require('components/IFrameCommunication/actions')
+                    .default,
                 Plugable: require('reactium-core/components/Plugable/actions')
                     .default,
                 Router: require('reactium-core/components/Router/actions')
@@ -16,7 +17,8 @@ module.exports = {
                     .default,
             },
             allActionTypes: {
-                Test: require('components/Demo/Test/actionTypes').default,
+                IFrameCommunication: require('components/IFrameCommunication/actionTypes')
+                    .default,
                 Plugable: require('reactium-core/components/Plugable/actionTypes')
                     .default,
                 Router: require('reactium-core/components/Router/actionTypes')
@@ -25,7 +27,8 @@ module.exports = {
                     .default,
             },
             allReducers: {
-                Test: require('components/Demo/Test/reducers').default,
+                IFrameCommunication: require('components/IFrameCommunication/reducers')
+                    .default,
                 Plugable: require('reactium-core/components/Plugable/reducers')
                     .default,
                 Router: require('reactium-core/components/Router/reducers')
@@ -34,7 +37,8 @@ module.exports = {
                     .default,
             },
             allInitialStates: {
-                Test: require('components/Demo/Test/state').default,
+                IFrameCommunication: require('components/IFrameCommunication/state')
+                    .default,
                 Plugable: require('reactium-core/components/Plugable/state')
                     .default,
                 Router: require('reactium-core/components/Router/state')
@@ -43,20 +47,14 @@ module.exports = {
                     .default,
             },
             allRoutes: {
-                About: require('components/Demo/Site/Pages/About/route')
+                IFrameCommunication: require('components/IFrameCommunication/route')
                     .default,
-                Catering: require('components/Demo/Site/Pages/Catering/route')
-                    .default,
-                Contact: require('components/Demo/Site/Pages/Contact/route')
-                    .default,
-                Home: require('components/Demo/Site/Pages/Home/route').default,
-                Menu: require('components/Demo/Site/Pages/Menu/route').default,
-                Test: require('components/Demo/Test/route').default,
                 Toolkit: require('reactium-core/components/Toolkit/route')
                     .default,
             },
             allServices: {
-                Test: require('components/Demo/Test/services').default,
+                IFrameCommunication: require('components/IFrameCommunication/services')
+                    .default,
             },
             allMiddleware: {
                 redux: require('reactium-core/redux/middleware').default,
@@ -65,8 +63,7 @@ module.exports = {
                 redux: require('reactium-core/redux/enhancer').default,
             },
             allPlugins: {
-                Button: require('components/Demo/Site/Button/plugin').default,
-                TestPlugin: require('components/Demo/Test/TestPlugin/plugin')
+                IFrameCommunication: require('components/IFrameCommunication/plugin')
                     .default,
             },
         };
@@ -110,7 +107,7 @@ module.exports = {
             allActions: {
                 type: 'actions',
                 imports: [
-                    'components/Demo/Test/actions',
+                    'components/IFrameCommunication/actions',
                     'reactium-core/components/Plugable/actions',
                     'reactium-core/components/Router/actions',
                     'reactium-core/components/Toolkit/actions',
@@ -119,7 +116,7 @@ module.exports = {
             allActionTypes: {
                 type: 'actionTypes',
                 imports: [
-                    'components/Demo/Test/actionTypes',
+                    'components/IFrameCommunication/actionTypes',
                     'reactium-core/components/Plugable/actionTypes',
                     'reactium-core/components/Router/actionTypes',
                     'reactium-core/components/Toolkit/actionTypes',
@@ -128,7 +125,7 @@ module.exports = {
             allReducers: {
                 type: 'reducers',
                 imports: [
-                    'components/Demo/Test/reducers',
+                    'components/IFrameCommunication/reducers',
                     'reactium-core/components/Plugable/reducers',
                     'reactium-core/components/Router/reducers',
                     'reactium-core/components/Toolkit/reducers',
@@ -137,7 +134,7 @@ module.exports = {
             allInitialStates: {
                 type: 'state',
                 imports: [
-                    'components/Demo/Test/state',
+                    'components/IFrameCommunication/state',
                     'reactium-core/components/Plugable/state',
                     'reactium-core/components/Router/state',
                     'reactium-core/components/Toolkit/state',
@@ -146,18 +143,13 @@ module.exports = {
             allRoutes: {
                 type: 'route',
                 imports: [
-                    'components/Demo/Site/Pages/About/route',
-                    'components/Demo/Site/Pages/Catering/route',
-                    'components/Demo/Site/Pages/Contact/route',
-                    'components/Demo/Site/Pages/Home/route',
-                    'components/Demo/Site/Pages/Menu/route',
-                    'components/Demo/Test/route',
+                    'components/IFrameCommunication/route',
                     'reactium-core/components/Toolkit/route',
                 ],
             },
             allServices: {
                 type: 'services',
-                imports: ['components/Demo/Test/services'],
+                imports: ['components/IFrameCommunication/services'],
             },
             allMiddleware: {
                 type: 'middleware',
@@ -169,10 +161,7 @@ module.exports = {
             },
             allPlugins: {
                 type: 'plugin',
-                imports: [
-                    'components/Demo/Site/Button/plugin',
-                    'components/Demo/Test/TestPlugin/plugin',
-                ],
+                imports: ['components/IFrameCommunication/plugin'],
             },
         };
     },

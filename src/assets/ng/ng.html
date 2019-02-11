@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <div id="shopping-list" ng-app="myShoppingList" ng-controller="myCtrl">
+          <ul>
+            <li ng-repeat="x in products">{{x}}</li>
+          </ul>
+          <input ng-model="addMe">
+          <button ng-click="addItem()">Add</button>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.js"></script>
+        <script src="/assets/ng/ng.js"></script>
+        <script src="/assets/ng/bellhop.js" type="module"></script>
+        <script type="module">
+            import { Bellhop } from '/assets/ng/bellhop.js';
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+
+            if (inIframe) {
+                const bellhop = new Bellhop();
+                bellhop.connect();
+                bellhop.send('init');
+                bellhop.on('products', ({data}) => {
+                    const scope = angular.element(document.getElementById('shopping-list')).scope();
+                    scope.products = scope.products.concat(data);
+                    scope.$apply();
+                })
+            }
+        </script>
+    </body>
+</html>
