@@ -2,6 +2,21 @@
  * Stylesheet _style.scss
  */
 
-.style {
+.iframe-demo-row {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    width: 33vw;
+    margin: px2rem(100) auto;
+    min-height: px2rem(100);
 
+    iframe {
+        border: 1px solid grey;
+        padding: px2rem(20);
+    }
+
+    & > * {
+        flex-grow: 0;
+    }
 }

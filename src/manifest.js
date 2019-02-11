@@ -7,8 +7,6 @@ module.exports = {
     get: () => {
         return {
             allActions: {
-                IFrameCommunication: require('components/IFrameCommunication/actions')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/actions')
                     .default,
                 Router: require('reactium-core/components/Router/actions')
@@ -17,8 +15,6 @@ module.exports = {
                     .default,
             },
             allActionTypes: {
-                IFrameCommunication: require('components/IFrameCommunication/actionTypes')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/actionTypes')
                     .default,
                 Router: require('reactium-core/components/Router/actionTypes')
@@ -27,8 +23,6 @@ module.exports = {
                     .default,
             },
             allReducers: {
-                IFrameCommunication: require('components/IFrameCommunication/reducers')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/reducers')
                     .default,
                 Router: require('reactium-core/components/Router/reducers')
@@ -37,8 +31,6 @@ module.exports = {
                     .default,
             },
             allInitialStates: {
-                IFrameCommunication: require('components/IFrameCommunication/state')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/state')
                     .default,
                 Router: require('reactium-core/components/Router/state')
@@ -52,20 +44,14 @@ module.exports = {
                 Toolkit: require('reactium-core/components/Toolkit/route')
                     .default,
             },
-            allServices: {
-                IFrameCommunication: require('components/IFrameCommunication/services')
-                    .default,
-            },
+            allServices: {},
             allMiddleware: {
                 redux: require('reactium-core/redux/middleware').default,
             },
             allEnhancers: {
                 redux: require('reactium-core/redux/enhancer').default,
             },
-            allPlugins: {
-                IFrameCommunication: require('components/IFrameCommunication/plugin')
-                    .default,
-            },
+            allPlugins: {},
         };
     },
     contexts: {
@@ -107,7 +93,6 @@ module.exports = {
             allActions: {
                 type: 'actions',
                 imports: [
-                    'components/IFrameCommunication/actions',
                     'reactium-core/components/Plugable/actions',
                     'reactium-core/components/Router/actions',
                     'reactium-core/components/Toolkit/actions',
@@ -116,7 +101,6 @@ module.exports = {
             allActionTypes: {
                 type: 'actionTypes',
                 imports: [
-                    'components/IFrameCommunication/actionTypes',
                     'reactium-core/components/Plugable/actionTypes',
                     'reactium-core/components/Router/actionTypes',
                     'reactium-core/components/Toolkit/actionTypes',
@@ -125,7 +109,6 @@ module.exports = {
             allReducers: {
                 type: 'reducers',
                 imports: [
-                    'components/IFrameCommunication/reducers',
                     'reactium-core/components/Plugable/reducers',
                     'reactium-core/components/Router/reducers',
                     'reactium-core/components/Toolkit/reducers',
@@ -134,7 +117,6 @@ module.exports = {
             allInitialStates: {
                 type: 'state',
                 imports: [
-                    'components/IFrameCommunication/state',
                     'reactium-core/components/Plugable/state',
                     'reactium-core/components/Router/state',
                     'reactium-core/components/Toolkit/state',
@@ -149,7 +131,7 @@ module.exports = {
             },
             allServices: {
                 type: 'services',
-                imports: ['components/IFrameCommunication/services'],
+                imports: [],
             },
             allMiddleware: {
                 type: 'middleware',
@@ -161,7 +143,7 @@ module.exports = {
             },
             allPlugins: {
                 type: 'plugin',
-                imports: ['components/IFrameCommunication/plugin'],
+                imports: [],
             },
         };
     },
