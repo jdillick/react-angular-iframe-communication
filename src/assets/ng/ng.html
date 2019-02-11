@@ -28,7 +28,7 @@
                 }
             }
 
-            if (inIframe) {
+            if (inIframe()) {
                 const bellhop = new Bellhop();
                 bellhop.connect();
                 bellhop.send('init');
