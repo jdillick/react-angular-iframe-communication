@@ -6,6 +6,8 @@ The [Bellhop Iframe](https://www.npmjs.com/package/bellhop-iframe) library provi
 
 See `src/assets/ng` for the Angular app, and `src/app/components/IFrameCommunication` component for the React side.
 
+[Demo](https://react-angular-iframe-communica.herokuapp.com/)
+
 ## To use
 
 -   `npm install`
