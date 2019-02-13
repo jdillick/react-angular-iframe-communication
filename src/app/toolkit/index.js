@@ -44,6 +44,10 @@ module.exports = {
             css: '/assets/style/achromatopsia.css',
         },
         {
+            name: 'Achromatomaly Accessible',
+            css: '/assets/style/achromatomaly.css',
+        },
+        {
             name: 'Chromatomaly Accessible',
             css: '/assets/style/achromatomaly.css',
         },
@@ -137,6 +141,17 @@ module.exports = {
                     component: require('appdir/toolkit/global/Grid').default,
                     readme: require('appdir/toolkit/global/Grid/readme')
                         .default,
+                },
+                'color-test': {
+                    type: 'atom',
+                    label: 'ColorTest',
+                    route: '/toolkit/global/color-test',
+                    dna: '/toolkit/global/ColorTest',
+                    component: require('appdir/toolkit/global/ColorTest')
+                        .default,
+                    hideCode: true,
+                    hideDna: true,
+                    hideDocs: true,
                 },
                 spacing: {
                     type: 'atom',
